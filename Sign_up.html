@@ -1,0 +1,103 @@
+<style>
+    #div {
+        display: block;
+        height: 740px;
+        background-repeat: no-repeat;
+        background-image: url('https://images.pexels.com/photos/1479025/pexels-photo-1479025.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')
+    }
+    
+    h6 {
+        color: white;
+        text-decoration: blanchedalmond;
+    }
+    /* #city { */
+    /* width: 325px; */
+    /* } */
+    /* #citydiv { */
+    /* margin-right: -173px; */
+    /* } */
+    
+    #btn1 {
+        padding: 5px 110px;
+        margin-left: 15px;
+    }
+    
+    #cbox {
+        margin-top: 0px;
+        margin-left: 15px;
+    }
+    
+    #btn1:hover {
+        color: black;
+    }
+    
+    #cbox input {
+        padding: 5px;
+    }
+</style>
+<div id='div'>
+    {% extends "base.html" %} {% block title %}Sign up{% endblock title %} {% block body %}
+    <form class="needs-validation" novalidate>
+        <div class="form-column">
+            <div class="col-md-4 mb-3">
+                <label for="validationTooltip01"><h6>First Name</h6></label>
+                <input type="text" class="form-control" id="validationTooltip01" value="First Name" required>
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationTooltip02"><h6>Last Name</h6></label>
+                <input type="text" class="form-control" id="validationTooltip02" value="Last Name" required>
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="exampleInputEmail1"><h6>Email</h6></label>
+                <input type="email" value="Email@mail.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="exampleInputPassword1"><h6>Password</h6></label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+
+
+        </div>
+        <div class="form-column">
+            <div id="citydiv" class="col-md-4 mb-3">
+                <label for="validationTooltip03"><h6>City</h6></label>
+                <input type="text" value="City" class="form-control" id="city" id="validationTooltip03" required>
+                <div class="invalid-tooltip">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationTooltip04"><h6>State</h6></label>
+                <select class="custom-select" id="validationTooltip04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>...</option>
+      </select>
+                <div class="invalid-tooltip">
+                    Please select a valid state.
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <div class="form-check" id="cbox">
+                <input class="form-check-input is-invalid" id="cbox1" type="checkbox" value="" id="invalidCheck3" required>
+                <label class="form-check-label" for="invalidCheck3">
+                <h6> to terms and conditions</h6>
+                </label>
+
+            </div>
+        </div>
+        <button class="btn btn-primary" id="btn1" type="submit">Submit form</button>
+    </form>
+
+    {% endblock body %}
+</div>
